@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <title></title>
+  </head>
+
+  <body>
+    <main>
+      <!-- <h1>Table with Nested Tables Hidden behind Expando Buttons</h1> -->
+      <table id="Books">
+        <!-- <caption>Books I May or May Not Have Read</caption> -->
+        <tr>
+          <th id="AuthMoreLbl">
+            <span class="visually">ORDERS</span>
+          </th>
+          <th>Customer Name</th>
+          <th>Customer Order</th>
+          <th>Trailer</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td>
+            <button
+              type="button"
+              id="btnAuth01"
+              aria-controls="Auth01More"
+              aria-expanded="false"
+              aria-label="Show more by"
+              aria-labelledby="AuthMoreLbl Auth01"
+              onclick="toggle(this.id,'Auth01More');"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+            </button>
+          </td>
+          <td id="Auth01">deepak Garg</td>
+          <td>OR-5006</td>
+          <td>R1033</td>
+          <td>IN</td>
+        </tr>
+        <tr style="display: none" id="Auth01More">
+          <td colspan="6">
+            <table>
+              <caption>
+                Other Books by Miguel De Cervantes
+              </caption>
+              <tr>
+                <th>TRIPS</th>
+                <th>STOP</th>
+                <th>TRUCK</th>
+                <th>DRIVER</th>
+                <th>SHIPPER</th>
+                <th>ADDRESS</th>
+                <th>CITY NAME</th>
+                <th>DATE</th>
+                <th>START TIME</th>
+                <th>END TIME</th>
+              </tr>
+              <tr>
+                <td contenteditable="true">00003</td>
+                <td contenteditable="true">ST-000014</td>
+                <td contenteditable="true">STEP VAN - 01</td>
+                <td contenteditable="true">Balkaran</td>
+                <td contenteditable="true">Commercial Press (Sample)</td>
+                <td contenteditable="true">Wing Building Bombay</td>
+                <td contenteditable="true">Mumbai</td>
+                <td contenteditable="true">21-01-2024</td>
+                <td contenteditable="true">03:00 am</td>
+                <td contenteditable="true">05:10 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00005</td>
+                <td contenteditable="true">ST-000012</td>
+                <td contenteditable="true">STEP VAN - 02</td>
+                <td contenteditable="true">TARANBIR SINGH</td>
+                <td contenteditable="true">Morlong Associates (Sample)</td>
+                <td contenteditable="true">PG 65 Mohali</td>
+                <td contenteditable="true">Punjab</td>
+                <td contenteditable="true">22-01-2024</td>
+                <td contenteditable="true">06:00 am</td>
+                <td contenteditable="true">11:00 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00004</td>
+                <td contenteditable="true">ST-000011</td>
+                <td contenteditable="true">STEP VAN - 03</td>
+                <td contenteditable="true">SUKHBIR SINGH GOHAL</td>
+                <td contenteditable="true">Printing Dimensions (Sample)</td>
+                <td contenteditable="true">4/55 kashmirigate</td>
+                <td contenteditable="true">Delhi</td>
+                <td contenteditable="true">18-01-2024</td>
+                <td contenteditable="true">10:00 pm</td>
+                <td contenteditable="true">12:10 pm</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              type="button"
+              id="btnAuth02"
+              aria-controls="Auth02More"
+              aria-expanded="false"
+              aria-label="Show more by"
+              aria-labelledby="AuthMoreLbl Auth02"
+              onclick="toggle(this.id,'Auth02More');"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+            </button>
+          </td>
+          <td id="Auth02">Mary Shelley</td>
+          <td>OR-5007</td>
+          <td>R1034</td>
+          <td>OUT</td>
+        </tr>
+        <tr style="display: none" id="Auth02More">
+          <td colspan="6">
+            <table>
+              <caption>
+                Other Books by Miguel De Cervantes
+              </caption>
+              <tr>
+                <th>TRIPS</th>
+                <th>STOP</th>
+                <th>TRUCK</th>
+                <th>DRIVER</th>
+                <th>SHIPPER</th>
+                <th>ADDRESS</th>
+                <th>CITY NAME</th>
+                <th>DATE</th>
+                <th>START TIME</th>
+                <th>END TIME</th>
+              </tr>
+              <tr>
+                <td contenteditable="true">00003</td>
+                <td contenteditable="true">ST-000014</td>
+                <td contenteditable="true">STEP VAN - 01</td>
+                <td contenteditable="true">Balkaran</td>
+                <td contenteditable="true">Commercial Press (Sample)</td>
+                <td contenteditable="true">Wing Building Bombay</td>
+                <td contenteditable="true">Mumbai</td>
+                <td contenteditable="true">21-01-2024</td>
+                <td contenteditable="true">03:00 am</td>
+                <td contenteditable="true">05:10 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00005</td>
+                <td contenteditable="true">ST-000015</td>
+                <td contenteditable="true">STEP VAN - 02</td>
+                <td contenteditable="true">TARANBIR SINGH</td>
+                <td contenteditable="true">Morlong Associates (Sample)</td>
+                <td contenteditable="true">PG 65 Mohali</td>
+                <td contenteditable="true">Punjab</td>
+                <td contenteditable="true">22-01-2024</td>
+                <td contenteditable="true">06:00 am</td>
+                <td contenteditable="true">11:00 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00004</td>
+                <td contenteditable="true">ST-000016</td>
+                <td contenteditable="true">STEP VAN - 03</td>
+                <td contenteditable="true">SUKHBIR SINGH GOHAL</td>
+                <td contenteditable="true">Printing Dimensions (Sample)</td>
+                <td contenteditable="true">4/55 kashmirigate</td>
+                <td contenteditable="true">Delhi</td>
+                <td contenteditable="true">18-01-2024</td>
+                <td contenteditable="true">10:00 pm</td>
+                <td contenteditable="true">12:10 pm</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              type="button"
+              id="btnAuth03"
+              aria-controls="Auth03More"
+              aria-expanded="false"
+              aria-label="Show more by"
+              aria-labelledby="AuthMoreLbl Auth03"
+              onclick="toggle(this.id,'Auth03More');"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+            </button>
+          </td>
+          <td id="Auth03">Herman Melville</td>
+          <td>OR-5008</td>
+          <td>R1035</td>
+          <td>IN</td>
+        </tr>
+        <tr style="display: none" id="Auth03More">
+          <td colspan="6">
+            <table>
+              <caption>
+                Other Books by Miguel De Cervantes
+              </caption>
+              <tr>
+                <th>TRIPS</th>
+                <th>STOP</th>
+                <th>TRUCK</th>
+                <th>DRIVER</th>
+                <th>SHIPPER</th>
+                <th>ADDRESS</th>
+                <th>CITY NAME</th>
+                <th>DATE</th>
+                <th>START TIME</th>
+                <th>END TIME</th>
+              </tr>
+              <tr>
+                <td contenteditable="true">00003</td>
+                <td contenteditable="true">ST-000012</td>
+                <td contenteditable="true">STEP VAN - 01</td>
+                <td contenteditable="true">Balkaran</td>
+                <td contenteditable="true">Commercial Press (Sample)</td>
+                <td contenteditable="true">Wing Building Bombay</td>
+                <td contenteditable="true">Mumbai</td>
+                <td contenteditable="true">21-01-2024</td>
+                <td contenteditable="true">03:00 am</td>
+                <td contenteditable="true">05:10 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00005</td>
+                <td contenteditable="true">ST-000042</td>
+                <td contenteditable="true">STEP VAN - 02</td>
+                <td contenteditable="true">TARANBIR SINGH</td>
+                <td contenteditable="true">Morlong Associates (Sample)</td>
+                <td contenteditable="true">PG 65 Mohali</td>
+                <td contenteditable="true">Punjab</td>
+                <td contenteditable="true">22-01-2024</td>
+                <td contenteditable="true">06:00 am</td>
+                <td contenteditable="true">11:00 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00004</td>
+                <td contenteditable="true">ST-000043</td>
+                <td contenteditable="true">STEP VAN - 03</td>
+                <td contenteditable="true">SUKHBIR SINGH GOHAL</td>
+                <td contenteditable="true">Printing Dimensions (Sample)</td>
+                <td contenteditable="true">4/55 kashmirigate</td>
+                <td contenteditable="true">Delhi</td>
+                <td contenteditable="true">18-01-2024</td>
+                <td contenteditable="true">10:00 pm</td>
+                <td contenteditable="true">12:10 pm</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              type="button"
+              id="btnAuth04"
+              aria-controls="Auth04More"
+              aria-expanded="false"
+              aria-label="Show more by"
+              aria-labelledby="AuthMoreLbl Auth04"
+              onclick="toggle(this.id,'Auth04More');"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+            </button>
+          </td>
+          <td id="Auth04">Emma Dorothy Eliza</td>
+          <td>OR-5009</td>
+          <td>R1036</td>
+          <td>QC-IN</td>
+        </tr>
+        <tr style="display: none" id="Auth04More">
+          <td colspan="6">
+            <table>
+              <caption>
+                Other Books by Miguel De Cervantes
+              </caption>
+              <tr>
+                <th>TRIPS</th>
+                <th>STOP</th>
+                <th>TRUCK</th>
+                <th>DRIVER</th>
+                <th>SHIPPER</th>
+                <th>ADDRESS</th>
+                <th>CITY NAME</th>
+                <th>DATE</th>
+                <th>START TIME</th>
+                <th>END TIME</th>
+              </tr>
+              <tr>
+                <td contenteditable="true">00003</td>
+                <td contenteditable="true">ST-000004</td>
+                <td contenteditable="true">STEP VAN - 01</td>
+                <td contenteditable="true">Balkaran</td>
+                <td contenteditable="true">Commercial Press (Sample)</td>
+                <td contenteditable="true">Wing Building Bombay</td>
+                <td contenteditable="true">Mumbai</td>
+                <td contenteditable="true">21-01-2024</td>
+                <td contenteditable="true">03:00 am</td>
+                <td contenteditable="true">05:10 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00005</td>
+                <td contenteditable="true">ST-000003</td>
+                <td contenteditable="true">STEP VAN - 02</td>
+                <td contenteditable="true">TARANBIR SINGH</td>
+                <td contenteditable="true">Morlong Associates (Sample)</td>
+                <td contenteditable="true">PG 65 Mohali</td>
+                <td contenteditable="true">Punjab</td>
+                <td contenteditable="true">22-01-2024</td>
+                <td contenteditable="true">06:00 am</td>
+                <td contenteditable="true">11:00 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00004</td>
+                <td contenteditable="true">ST-000001</td>
+                <td contenteditable="true">STEP VAN - 03</td>
+                <td contenteditable="true">SUKHBIR SINGH GOHAL</td>
+                <td contenteditable="true">Printing Dimensions (Sample)</td>
+                <td contenteditable="true">4/55 kashmirigate</td>
+                <td contenteditable="true">Delhi</td>
+                <td contenteditable="true">18-01-2024</td>
+                <td contenteditable="true">10:00 pm</td>
+                <td contenteditable="true">12:10 pm</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              type="button"
+              id="btnAuth05"
+              aria-controls="Auth05More"
+              aria-expanded="false"
+              aria-label="Show more by"
+              aria-labelledby="AuthMoreLbl Auth05"
+              onclick="toggle(this.id,'Auth05More');"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+            </button>
+          </td>
+          <td id="Auth05">F. Scott Fitzgerald</td>
+          <td>OR-5010</td>
+          <td>R1037</td>
+          <td>QC-OUT</td>
+        </tr>
+        <tr style="display: none" id="Auth05More">
+          <td colspan="6">
+            <table>
+              <caption>
+                Other Books by Miguel De Cervantes
+              </caption>
+              <tr>
+                <th>TRIPS</th>
+                <th>STOP</th>
+                <th>TRUCK</th>
+                <th>DRIVER</th>
+                <th>SHIPPER</th>
+                <th>ADDRESS</th>
+                <th>CITY NAME</th>
+                <th>DATE</th>
+                <th>START TIME</th>
+                <th>END TIME</th>
+              </tr>
+              <tr>
+                <td contenteditable="true">00003</td>
+                <td contenteditable="true">ST-000023</td>
+                <td contenteditable="true">STEP VAN - 01</td>
+                <td contenteditable="true">Balkaran</td>
+                <td contenteditable="true">Commercial Press (Sample)</td>
+                <td contenteditable="true">Wing Building Bombay</td>
+                <td contenteditable="true">Mumbai</td>
+                <td contenteditable="true">21-01-2024</td>
+                <td contenteditable="true">03:00 am</td>
+                <td contenteditable="true">05:10 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00005</td>
+                <td contenteditable="true">ST-000024</td>
+                <td contenteditable="true">STEP VAN - 02</td>
+                <td contenteditable="true">TARANBIR SINGH</td>
+                <td contenteditable="true">Morlong Associates (Sample)</td>
+                <td contenteditable="true">PG 65 Mohali</td>
+                <td contenteditable="true">Punjab</td>
+                <td contenteditable="true">22-01-2024</td>
+                <td contenteditable="true">06:00 am</td>
+                <td contenteditable="true">11:00 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00004</td>
+                <td contenteditable="true">ST-000022</td>
+                <td contenteditable="true">STEP VAN - 03</td>
+                <td contenteditable="true">SUKHBIR SINGH GOHAL</td>
+                <td contenteditable="true">Printing Dimensions (Sample)</td>
+                <td contenteditable="true">4/55 kashmirigate</td>
+                <td contenteditable="true">Delhi</td>
+                <td contenteditable="true">18-01-2024</td>
+                <td contenteditable="true">10:00 pm</td>
+                <td contenteditable="true">12:10 pm</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              type="button"
+              id="btnAuth06"
+              aria-controls="Auth06More"
+              aria-expanded="false"
+              aria-label="Show more by"
+              aria-labelledby="AuthMoreLbl Auth06"
+              onclick="toggle(this.id,'Auth06More');"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+            </button>
+          </td>
+          <td id="Auth06">George Orwell</td>
+          <td>OR-5011</td>
+          <td>R1938</td>
+          <td>QC-OUT</td>
+        </tr>
+        <tr style="display: none" id="Auth06More">
+          <td colspan="6">
+            <table>
+              <caption>
+                Other Books by Miguel De Cervantes
+              </caption>
+              <tr>
+                <th>TRIPS</th>
+                <th>STOP</th>
+                <th>TRUCK</th>
+                <th>DRIVER</th>
+                <th>SHIPPER</th>
+                <th>ADDRESS</th>
+                <th>CITY NAME</th>
+                <th>DATE</th>
+                <th>START TIME</th>
+                <th>END TIME</th>
+              </tr>
+              <tr>
+                <td contenteditable="true">00003</td>
+                <td contenteditable="true">ST-000029</td>
+                <td contenteditable="true">STEP VAN - 01</td>
+                <td contenteditable="true">Balkaran</td>
+                <td contenteditable="true">Commercial Press (Sample)</td>
+                <td contenteditable="true">Wing Building Bombay</td>
+                <td contenteditable="true">Mumbai</td>
+                <td contenteditable="true">21-01-2024</td>
+                <td contenteditable="true">03:00 am</td>
+                <td contenteditable="true">05:10 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00005</td>
+                <td contenteditable="true">ST-000027</td>
+                <td contenteditable="true">STEP VAN - 02</td>
+                <td contenteditable="true">TARANBIR SINGH</td>
+                <td contenteditable="true">Morlong Associates (Sample)</td>
+                <td contenteditable="true">PG 65 Mohali</td>
+                <td contenteditable="true">Punjab</td>
+                <td contenteditable="true">22-01-2024</td>
+                <td contenteditable="true">06:00 am</td>
+                <td contenteditable="true">11:00 am</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">00004</td>
+                <td contenteditable="true">ST-000028</td>
+                <td contenteditable="true">STEP VAN - 03</td>
+                <td contenteditable="true">SUKHBIR SINGH GOHAL</td>
+                <td contenteditable="true">Printing Dimensions (Sample)</td>
+                <td contenteditable="true">4/55 kashmirigate</td>
+                <td contenteditable="true">Delhi</td>
+                <td contenteditable="true">18-01-2024</td>
+                <td contenteditable="true">10:00 pm</td>
+                <td contenteditable="true">12:10 pm</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

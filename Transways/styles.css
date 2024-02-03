@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 
 body {
-  /* background-color: #eeeeee; */
   background-color: #fff;
-  font-size: 100%;
+  font-size: 91%;
   color: #333;
   font-family: Lato, Arial, sans-serif;
   padding: 0;
@@ -14,9 +13,8 @@ main {
   display: block;
   box-sizing: border-box;
   width: auto;
-  padding: 1em 1vw;
   margin: 1em 1vw;
-  color: #000;
+  /* color: #020202; */
 }
 
 table {
@@ -26,7 +24,7 @@ table {
 }
 
 table table {
-  margin: 0 0 1em 0;
+  margin: 0px 0px 0px 0px;
 }
 
 caption {
@@ -49,9 +47,9 @@ table table caption {
 
 th,
 td {
-  padding: 0.25em 0.5em 0.25em 1em;
-  vertical-align: text-top;
-  text-align: left;
+  /* padding: 0.5em 0.2em 0.25em 1em; */
+  /* vertical-align: top; */
+  text-align: center;
   text-indent: -0.5em;
 }
 
@@ -61,12 +59,12 @@ table table td {
 }
 
 td[colspan] {
-  padding-left: 0.5em;
+  /* padding-left: 0.5em; */
 }
 
 th {
-  vertical-align: bottom;
-  padding-block: 15px;
+  vertical-align: top;
+  /* padding-block: 15px; */
   color: #444;
   font-weight: bold;
   align-items: center;
@@ -74,7 +72,6 @@ th {
 }
 
 table table th {
-  /* background-color: #757575; */
   border-bottom: 1px solid rgb(189, 177, 177);
   
 }
@@ -85,23 +82,23 @@ tr:nth-child(odd) {
 }
 
 table table tr {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(4, 3, 3);
 
 
   border-right: none;
   border-left: none;
 }
 table table tr th{
-  background-color: #2274ba;
+  background-color: #47a148;
   color: #fff;
-  padding-top: 5px;
+  padding-inline: 8px;
 }
 
 table table tr td{
     border-left: none;
-    /* padding: 5px; */
-      background-color: #67a9e2f7;
-      color: #363636;
+    padding-inline: 5px;
+      background-color: #f7ffef;
+      color: #000000;
     align-items: center;
     margin: 10px;
 }
@@ -113,11 +110,11 @@ table  tr {
 }
 
 tr:nth-child(even) {
-  background-color: rgb(159 197 229);
+  background-color: #fff;
 }
 
 tr:nth-child(odd) {
-    background-color: rgba(172 188 202);
+    background-color: rgba(228 180 180);
 }
 
 td:nth-of-type(3),
@@ -129,13 +126,8 @@ td td:nth-of-type(3) {
   font-style: normal;
 }
 
-th:nth-of-type(4),
-td:nth-of-type(4) {
-  text-align: right;
-}
-
 td button {
-  font-size: 60%;
+  font-size: 40%;
   color: #000;
   background-color: #fff;
   padding: 0.3em 0.2em 0 0.2em;
